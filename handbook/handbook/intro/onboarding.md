@@ -16,5 +16,5 @@ If your system language is supported by Velquorin, it will be automatically set 
 > Language preferences can be adjusted at any time [through the client settings interface](/basics/ui-navigation#miscellaneous).
 
 ---
-Generally, you're all set! You can start using (or experimenting) with the client right away, [try a configuration from the examples](https://github.com/clemenside/velquorin-examples),
+Generally, you're all set! You can start using (or experimenting) with the client right away, [try a configuration from the examples](https://github.com/velquorin/examples),
 or continue reading this handbook, for more comprehensive understanding of core features and advanced topics.

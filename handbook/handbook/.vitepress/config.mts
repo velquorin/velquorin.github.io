@@ -54,7 +54,7 @@ export default defineConfig({
       {
         text: 'Appendix',
         items: [
-          { text: 'Configuration examples', link: 'https://github.com/clemenside/velquorin-examples' },
+          { text: 'Configuration examples', link: 'https://github.com/velquorin/examples' },
           { text: 'Credits & attributions', link: 'https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions' }
         ]
       },
