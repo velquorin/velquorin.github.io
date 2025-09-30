@@ -12,7 +12,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/branding/logo.svg',
     nav: [
-      { text: 'Home', link: '/' },
       { text: 'Introduction', link: '/intro/introduction' },
       { text: 'Downloads', link: 'https://github.com/velquorin/client/releases' },
       { text: 'Attributions', link: 'https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions' }
