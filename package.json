@@ -1,0 +1,17 @@
+{
+  "name": "velquorin-website",
+  "private": true,
+  "workspaces": [
+    "lander",
+    "handbook"
+  ],
+  "scripts": {
+    "build": "npm run build -w lander && npm run docs:build -w handbook",
+    "preview": "npm run build && http-server dist -p 8080",
+    "dev:index": "npm run dev -w lander",
+    "dev:handbook": "npm run docs:dev -w handbook"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
