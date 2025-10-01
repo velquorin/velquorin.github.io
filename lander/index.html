@@ -1,66 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Velquorin</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
-    <link rel="icon" href="./logo.svg">
-    <link rel="stylesheet" href="./style.css">
+    <title>Velquorin</title>
 </head>
 <body>
-<div id="app">
-    <nav>
-        <div class="nav-left">
-            <img src="./logo.svg" alt="Velquorin logo" class="logo" />
-
-            <div class="nav-center" role="navigation" aria-label="Primary">
-                <a href="#" @click.prevent="currentPage = 'home'" :class="{ active: currentPage === 'home' }">Home</a>
-                <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
-            </div>
-        </div>
-
-        <div class="nav-right">
-            <a href="https://github.com/velquorin/client/" target="_blank" rel="noopener noreferrer">Source code ↗</a>
-            <a href="/handbook/intro/introduction.html" target="_blank" rel="noopener noreferrer">Handbook ↗</a>
-        </div>
-    </nav>
-
-    <main>
-        <div v-if="currentPage === 'home'" class="home-content" aria-live="polite">
-            <h1>Welcome to Velquorin</h1>
-            <p>A modern, transparent utility mod and modpack, and an alternative to closed clients.</p>
-
-            <div class="home-call-to-action">
-                <a class="primary-button" href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
-                <!--suppress HtmlUnknownTarget -->
-                <a class="secondary-button" href="/handbook/intro/installation.html" target="_blank" rel="noopener noreferrer">Quickstart</a>
-            </div>
-        </div>
-
-        <div v-if="currentPage === 'downloads'" class="downloads-content" aria-live="polite">
-            <h1>Downloads</h1>
-        </div>
-    </main>
-
-    <footer>
-        Logo is a derivative of the <a target="_blank" rel="noopener noreferrer" href="https://www.onlinewebfonts.com/icon/34775">"Butterfly Wings couple"</a> work from OnlineWebFonts.com, licensed under <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a> (<a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">notice file)</a><br>
-        Licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.<br>
-        © Clemenside, 2025.
-    </footer>
-</div>
-
-<script>
-    const { createApp } = Vue;
-
-    createApp({
-      data() {
-        return {
-          currentPage: 'home'
-        };
-      }
-    }).mount('#app');
-</script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>

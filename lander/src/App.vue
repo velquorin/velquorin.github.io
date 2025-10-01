@@ -1,3 +1,23 @@
+<template>
+  <div id="app">
+    <NavBar />
+    <router-view />
+    <Footer />
+  </div>
+</template>
+
+<script>
+import NavBar from './components/NavBar.vue';
+import Footer from "./components/Footer.vue";
+import HomePage from "./components/HomePage.vue";
+
+export default {
+  name: 'App',
+  components: { HomePage, Footer, NavBar }
+};
+</script>
+
+<style>
 :root {
   --background-primary: #1A1A1F;
   --background-elevated: #292931;
@@ -38,7 +58,7 @@ nav {
   justify-content: space-between;
   gap: 1rem;
   border-bottom: 1px solid var(--border-strong);
-  background: --overlay-subtle;
+  background: var(--overlay-subtle);
 }
 
 .nav-left {
@@ -52,13 +72,6 @@ nav {
   width: 36px;
   height: 36px;
   object-fit: contain;
-}
-
-.brand {
-  color: var(--muted);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
 }
 
 .nav-center {
@@ -115,18 +128,18 @@ main {
 
 .home-content {
   text-align: center;
-  max-width: 840px;
+  max-width: 920px;
 }
 
 .home-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: var(--foreground-accent);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .home-content p {
-  font-size: 1.125rem;
+  font-size: 1.225rem;
   line-height: 1.4;
   font-weight: 400;
   color: var(--foreground-primary);
@@ -301,3 +314,4 @@ footer {
     text-align: center;
   }
 }
+</style>
