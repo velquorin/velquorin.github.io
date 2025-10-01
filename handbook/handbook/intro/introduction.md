@@ -3,15 +3,12 @@
 </p>
 
 ### Welcome to Velquorin (**pronounced /ˈvɛl.kwɔː.rɪn/**)!
-This is an open-source Minecraft utility mod and a modpack (commonly called a "client"), similar to Lunar or Badlion feature-wise, but more transparent and aimed at the latest version, rather than compatibility with legacy versions. 
+This is an open-source Minecraft utility mod and a modpack (commonly called a "client"), similar to Lunar or Badlion feature-wise, but more transparent and aimed at the latest version, rather than compatibility with legacy versions.
 
-> [!WARNING]
-> ⚠️ This project is still in heavy development, and thus the handbook might lag behind the latest changes.
+> [!NOTE]
+> This project is still in heavy development, and thus the handbook might lag behind the latest changes.
 
 ## Features overview
-> [!TIP]
-> This list might not be up-to-date with the client, and thus not list all the features available.
-
 - [Discord Rich Presence](/reference/glossary#discord-rich-presence) integration
 - Waypoints
 - Tweaks
