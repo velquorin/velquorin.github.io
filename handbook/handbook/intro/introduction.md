@@ -56,4 +56,4 @@ If you're curious, the best way to find out is to try.
 
 ## License
 Client is licensed under [GPL 3.0](http://choosealicense.com/licenses/gpl-3.0/). The handbook and examples are in public domain.
-See [this](https://github.com/velquorin/client/tree/main#credits) for credits and attributions.
+See [this](https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions) for credits and attributions.

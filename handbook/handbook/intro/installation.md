@@ -30,7 +30,7 @@ Velquorin is distributed in two forms.
 > If you don't do any customizations yourself, which would replace or clash with the modpack, **the modpack** would be the best option for you.
 
 > [!NOTE]
-> Don't forget to install [Fabric API](https://modrinth.com/mod/fabric-api/version/0.133.4+1.21.8) if you're going with the standalone mod!
+> Don't forget to install [Fabric API](https://modrinth.com/mod/fabric-api/) if you're going with the standalone mod!
 
 > Further on, this page will cover only the modpack, since it's the intended option.
 
