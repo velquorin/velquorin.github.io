@@ -67,6 +67,11 @@ nav {
   margin-left: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--foreground-primary);
+}
+
 nav a {
   color: var(--foreground-secondary);
   text-decoration: none;
