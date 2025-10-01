@@ -14,6 +14,6 @@ hero:
       link: /intro/installation
     - theme: alt
       text: Downloads
-      link: https://github.com/clemenside/velquorin/releases
+      link: https://github.com/velquorin/client/releases
 ---
 

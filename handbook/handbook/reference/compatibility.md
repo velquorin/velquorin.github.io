@@ -3,7 +3,7 @@ Velquorin might be incompatible to some extent with quite a share of mods.
 
 > [!WARNING]
 > This list does not contain every single incompatible mod. 
-> If you've noticed some incompatibility between Velquorin and another mod, please create an [issue](https://github.com/clemenside/velquorin/issues) and tell us about it.
+> If you've noticed some incompatibility between Velquorin and another mod, please create an [issue](https://github.com/velquorin/client/issues) and tell us about it.
 
 | Mod                                               | Velquorin compatibility                   | Reason                                                                                                                                        |
 |---------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|

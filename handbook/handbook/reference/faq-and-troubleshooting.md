@@ -1,6 +1,6 @@
 # Commonly asked questions and troubleshooting 
 ## Mod *x* causes Velquorin to crash!
-[Please open an issue in the repository](https://github.com/clemenside/velquorin/issues/new),
+[Please open an issue in the repository](https://github.com/velquorin/client/issues/new),
 
 Including:
 - Which mods you were using
@@ -8,7 +8,7 @@ Including:
 - A crash log (if available)
 
 ## Doing *x* causes Velquorin to crash!
-[Please open an issue in the repository](https://github.com/clemenside/velquorin/issues/new),
+[Please open an issue in the repository](https://github.com/velquorin/client/issues/new),
 
 Including:
 - What you did before Velquorin crashed
