@@ -4,6 +4,7 @@ import App from './App.vue';
 import HomePage from './components/HomePage.vue';
 import InstallationPage from "@/components/InstallationPage.vue";
 import OverviewPage from "@/components/OverviewPage.vue";
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const router = createRouter({
     history: createWebHistory(),

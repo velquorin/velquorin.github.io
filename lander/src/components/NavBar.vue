@@ -11,9 +11,9 @@
     </div>
 
     <div class="nav-right">
-      <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">Downloads ↗</a>
-      <a href="https://github.com/velquorin/client/" target="_blank" rel="noopener noreferrer">Source code ↗</a>
-      <a href="/handbook/intro/introduction.html" target="_blank" rel="noopener noreferrer">Handbook ↗</a>
+      <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">Downloads <i class="fas fa-external-link-alt"></i></a>
+      <a href="https://github.com/velquorin/client/" target="_blank" rel="noopener noreferrer">Source code <i class="fas fa-external-link-alt"></i></a>
+      <a href="/handbook/intro/introduction.html" target="_blank" rel="noopener noreferrer">Handbook <i class="fas fa-external-link-alt"></i></a>
     </div>
   </nav>
 </template>

@@ -239,7 +239,7 @@ main {
   gap: 0.75rem;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 0;
   animation: slideUp 0.5s ease-out;
   animation-delay: 0.4s;
   animation-fill-mode: both;
@@ -476,6 +476,11 @@ footer {
   animation: fadeIn 0.6s ease-out;
   animation-delay: 0.6s;
   animation-fill-mode: both;
+}
+
+.fa-external-link-alt {
+  font-size: 0.75em;
+  margin-left: 4px;
 }
 
 @keyframes pulse {

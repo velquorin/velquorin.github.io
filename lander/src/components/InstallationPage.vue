@@ -5,7 +5,7 @@
         <h1>Installation</h1>
         <p class="lead">
           A quick installation guide. For a friendlier, in-depth one see
-          <a href="/handbook/intro/installation.html" target="_blank" rel="noopener noreferrer">handbook ↗</a>.
+          <a href="/handbook/intro/installation.html" target="_blank" rel="noopener noreferrer">handbook <i class="fas fa-external-link-alt"></i></a>.
         </p>
       </header>
 
@@ -23,13 +23,13 @@
           <li>
             <strong>Java 21 (or above)</strong>
             I personally recommend Azul, but most OpenJDK distributions will work.
-            <a href="https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu" target="_blank" rel="noopener noreferrer">Azul Zulu downloads ↗</a>
+            <a href="https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu" target="_blank" rel="noopener noreferrer">Azul Zulu downloads <i class="fas fa-external-link-alt"></i></a>
           </li>
           <li>
             <strong>Fabric Loader</strong> Required to run the mod/pack. Install via your launcher.
           </li>
           <li>
-            <strong>Fabric API</strong> If you install the standalone mod (not the modpack), make sure to install the <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API ↗</a>. Modpack already inculdes it.
+            <strong>Fabric API</strong> If you install the standalone mod (not the modpack), make sure to install the <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API <i class="fas fa-external-link-alt"></i></a>. Modpack already inculdes it.
           </li>
         </ul>
       </section>
@@ -39,7 +39,7 @@
 
         <p>
           Find the list of releases on the GitHub releases page:
-          <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">GitHub releases ↗</a>
+          <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">GitHub releases <i class="fas fa-external-link-alt"></i></a>
         </p>
 
         <br>
