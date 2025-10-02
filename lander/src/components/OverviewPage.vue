@@ -40,12 +40,30 @@
             <button
                 class="faq-question"
                 @click="toggleFaq(index)"
-                :aria-expanded="item.isOpen"
+                :aria-expanded="item.isOpen.toString()"
+                :class="{ open: item.isOpen }"
+                type="button"
             >
               <span>{{ item.question }}</span>
-              <span class="faq-icon">{{ item.isOpen ? '−' : '+' }}</span>
+              <span class="faq-icon" aria-hidden="true">{{ item.isOpen ? '−' : '+' }}</span>
             </button>
-            <div class="faq-answer" v-show="item.isOpen" v-html="item.answer" />
+
+            <transition
+                @before-enter="beforeEnter"
+                @enter="enter"
+                @after-enter="afterEnter"
+                @before-leave="beforeLeave"
+                @leave="leave"
+                @after-leave="afterLeave"
+            >
+              <div
+                  v-if="item.isOpen"
+                  class="faq-answer"
+                  role="region"
+                  :aria-hidden="(!item.isOpen).toString()"
+                  v-html="item.answer"
+              />
+            </transition>
           </div>
         </div>
       </section>
@@ -92,6 +110,55 @@ const faqItems = ref([
 const toggleFaq = (index) => {
   faqItems.value[index].isOpen = !faqItems.value[index].isOpen;
 };
+
+function beforeEnter(element) {
+  element.style.height = '0px';
+  element.style.opacity = '0';
+  element.style.transform = 'translateY(-6px)';
+  element.style.overflow = 'hidden';
+}
+
+function enter(element) {
+  const targetHeight = `${element.scrollHeight}px`;
+  element.style.transition = 'height 260ms ease, opacity 220ms ease, transform 260ms ease';
+  requestAnimationFrame(() => {
+    element.style.height = targetHeight;
+    element.style.opacity = '1';
+    element.style.transform = 'translateY(0)';
+  });
+}
+
+function afterEnter(element) {
+  element.style.height = 'auto';
+  element.style.transition = '';
+  element.style.overflow = '';
+  element.style.transform = '';
+  element.style.opacity = '';
+}
+
+function beforeLeave(element) {
+  element.style.height = `${element.scrollHeight}px`;
+  element.style.opacity = '1';
+  element.style.transform = 'translateY(0)';
+  element.style.overflow = 'hidden';
+}
+
+function leave(element) {
+  element.style.transition = 'height 220ms ease, opacity 180ms ease, transform 220ms ease';
+  requestAnimationFrame(() => {
+    element.style.height = '0px';
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(-6px)';
+  });
+}
+
+function afterLeave(element) {
+  element.style.transition = '';
+  element.style.height = '';
+  element.style.opacity = '';
+  element.style.transform = '';
+  element.style.overflow = '';
+}
 </script>
 
 <style scoped>
@@ -108,12 +175,6 @@ const toggleFaq = (index) => {
   color: var(--foreground-primary);
   text-align: left;
   padding: 0;
-}
-
-.overview-content hr {
-  color: var(--border-subtle);
-  margin-top: 2rem;
-  margin-bottom: 1.2rem;
 }
 
 .overview-header h1 {
@@ -160,13 +221,6 @@ const toggleFaq = (index) => {
   color: var(--foreground-secondary);
 }
 
-.feature-list > li::before {
-  content: "";
-  color: var(--foreground-accent);
-  font-weight: bold;
-  display: inline-block;
-}
-
 .feature-list strong {
   color: var(--foreground-primary);
   font-weight: 600;
@@ -184,13 +238,6 @@ const toggleFaq = (index) => {
   font-size: 0.98rem;
 }
 
-.feature-list ul li::before {
-  content: "-";
-  color: var(--foreground-primary);
-  display: inline-block;
-  width: 1.2em;
-}
-
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -203,11 +250,13 @@ const toggleFaq = (index) => {
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 220ms ease, box-shadow 220ms ease;
 }
 
 .faq-item.is-open {
   border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
 }
 
 .faq-question {
@@ -215,7 +264,7 @@ const toggleFaq = (index) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.9rem;
   background: transparent;
   border: none;
   color: var(--foreground-primary);
@@ -223,19 +272,26 @@ const toggleFaq = (index) => {
   font-weight: 500;
   cursor: pointer;
   text-align: left;
-  transition: color 0.2s;
+  transition: color 0.18s ease;
 }
 
 .faq-question:hover {
   color: var(--foreground-accent);
 }
 
-.faq-icon {
+.faq-question .faq-icon {
   font-size: 1.5rem;
   color: var(--foreground-accent);
   font-weight: 300;
   min-width: 1.5rem;
   text-align: center;
+  transition: transform 260ms ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.faq-question.open .faq-icon {
+  transform: rotate(180deg);
 }
 
 .faq-answer {
@@ -243,43 +299,7 @@ const toggleFaq = (index) => {
   color: var(--foreground-secondary);
   font-size: 0.98rem;
   line-height: 1.6;
-  animation: fadeIn 0.2s ease-in;
-}
-
-.faq-answer p {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: var(--foreground-secondary);
-}
-
-.overview-content a {
-  display: inline-block;
-  position: relative;
-  line-height: 1.4;
-  font-weight: 400;
-  color: var(--foreground-accent);
-  text-decoration: none;
-  padding: 0.2em 0;
-}
-
-.overview-content a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: var(--foreground-accent);
   opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform 300ms ease;
-}
-
-.overview-content a:hover::after,
-.overview-content a:focus::after {
-  transform: scale(1);
 }
 
 /* chatgpt ass fix */
@@ -314,9 +334,9 @@ const toggleFaq = (index) => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .faq-answer ::v-deep a::after {
+  .faq-item,
+  .faq-question .faq-icon {
     transition: none;
-    transform: scale(1);
   }
 }
 </style>

@@ -13,25 +13,35 @@
       </button>
     </div>
 
-    <div
-        class="footer-details"
-        :class="{ open: isExpanded }"
-        id="footer-details"
-        :aria-hidden="(!isExpanded).toString()"
+    <transition
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+        @before-leave="beforeLeave"
+        @leave="leave"
+        @after-leave="afterLeave"
     >
-      <p>
-        Logo is a derivative of the
-        <a target="_blank" rel="noopener noreferrer" href="https://www.onlinewebfonts.com/icon/34775">
-          "Butterfly Wings couple"
-        </a>
-        work from OnlineWebFonts.com, licensed under
-        <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a>
-        <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">(notice file)</a>
-      </p>
-      <p>
-        Client licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.
-      </p>
-    </div>
+      <div
+          v-if="isExpanded"
+          class="footer-details"
+          id="footer-details"
+          role="region"
+          :aria-hidden="(!isExpanded).toString()"
+      >
+        <p>
+          Logo is a derivative of the
+          <a target="_blank" rel="noopener noreferrer" href="https://www.onlinewebfonts.com/icon/34775">
+            "Butterfly Wings couple"
+          </a>
+          work from OnlineWebFonts.com, licensed under
+          <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a>
+          <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">(notice file)</a>
+        </p>
+        <p>
+          Client licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.
+        </p>
+      </div>
+    </transition>
   </footer>
 </template>
 
@@ -46,6 +56,50 @@ export default {
   methods: {
     toggleExpanded() {
       this.isExpanded = !this.isExpanded;
+    },
+
+    beforeEnter(element) {
+      element.style.height = '0px';
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(-4px)';
+      element.style.overflow = 'hidden';
+    },
+    enter(element) {
+      const targetHeight = `${element.scrollHeight}px`;
+      element.style.transition = 'height 260ms ease, opacity 200ms ease, transform 260ms ease';
+      requestAnimationFrame(() => {
+        element.style.height = targetHeight;
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      });
+    },
+    afterEnter(element) {
+      element.style.height = 'auto';
+      element.style.transition = '';
+      element.style.overflow = '';
+      element.style.transform = '';
+      element.style.opacity = '';
+    },
+    beforeLeave(element) {
+      element.style.height = `${element.scrollHeight}px`;
+      element.style.opacity = '1';
+      element.style.transform = 'translateY(0)';
+      element.style.overflow = 'hidden';
+    },
+    leave(element) {
+      element.style.transition = 'height 220ms ease, opacity 180ms ease, transform 220ms ease';
+      requestAnimationFrame(() => {
+        element.style.height = '0px';
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(-4px)';
+      });
+    },
+    afterLeave(element) {
+      element.style.transition = '';
+      element.style.height = '';
+      element.style.opacity = '';
+      element.style.transform = '';
+      element.style.overflow = '';
     }
   }
 };
@@ -80,15 +134,7 @@ export default {
 
 .footer-details {
   margin-top: 0.25rem;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 260ms ease, opacity 260ms ease;
-  opacity: 0;
-}
-
-.footer-details.open {
-  max-height: 480px;
-  opacity: 1;
 }
 
 .footer-details p {
@@ -141,6 +187,12 @@ footer a:focus::after {
 
   .footer-details p {
     font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-details {
+    transition: none !important;
   }
 }
 </style>
