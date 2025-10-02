@@ -34,8 +34,7 @@
             "Butterfly Wings couple"
           </a>
           work from OnlineWebFonts.com, licensed under
-          <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a>
-          <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">(notice file)</a>
+          <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a> <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">(notice file)</a>
         </p>
         <p>
           Client licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.
