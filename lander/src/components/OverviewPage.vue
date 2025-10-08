@@ -102,7 +102,7 @@ const faqItems = ref([
   },
   {
     question: "I'm having a problem with Velquorin! It's crashing / not doing what I expect it to!",
-    answer: "Firstly, please consult with the <a href=\"/handbook/intro/installation.html\" target=\"_blank\" rel=\"noopener noreferrer\">handbook <i class=\"fas fa-external-link-alt\"></i></a>, it might contain the fix for your problem. However, if you can't find one, you <a href=\"https://github.com/velquorin/client/issues/new/choose\" target=\"_blank\" rel=\"noopener noreferrer\">can open an issue in our repository ↗</a>.",
+    answer: "Firstly, please consult with the <a href=\"/handbook/intro/installation.html\" target=\"_blank\" rel=\"noopener noreferrer\">handbook <i class=\"fas fa-external-link-alt\"></i></a>, it might contain the fix for your problem. However, if you can't find one, you <a href=\"https://github.com/velquorin/client/issues/new/choose\" target=\"_blank\" rel=\"noopener noreferrer\">can open an issue in our repository <i class=\"fas fa-external-link-alt\"></i></a>.",
     isOpen: false
   }
 ]);
