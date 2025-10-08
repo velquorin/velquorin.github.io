@@ -3,6 +3,8 @@
 If you're somewhat experienced, you likely know how to manage mods and instances in your launcher. Skip if needed.
 :::
 
+[[toc]]
+
 ## Launcher
 At this point you probably already have a launcher, however I'll do a quick recap.
 
@@ -22,16 +24,25 @@ Velquorin would work with any launcher, but a couple I recommend are:
 I recommend [Azul](https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu) since I use it personally, but there any many other options, for example: [OpenJDK](https://jdk.java.net/24/), [Adoptium](https://adoptium.net/temurin/releases?version=21&os=any&arch=any), [Casetto](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html).
 The setup is relatively the same between the vendors, just select the find for your platform and install it. You'd need version **21 or above** to play Minecraft and use Velquorin. Make sure to tick the option to add the installation into your system Path, if you get one.
 
-## Mod or modpack?
+## Distribution (Mod vs Modpack)
 Velquorin is distributed in two forms.
 - The mod, which is the core, containing main Velquorin features, such as widgets, game tweaks and enhancements and more.
 - The modpack, which contains the core, *and* more optimizations, and **quality-of-life** mods.
 
 > If you don't do any customizations yourself, which would replace or clash with the modpack, **the modpack** would be the best option for you.
 
-> [!NOTE]
-> Don't forget to install [Fabric API](https://modrinth.com/mod/fabric-api/) if you're going with the standalone mod!
+> Remember to install [Fabric API](https://modrinth.com/mod/fabric-api/) if you're going with the standalone mod.
 
+## Downloads
+You can find the list of released builds [here](https://github.com/velquorin/client/releases). There are two types of builds:
+- Stable builds which are tested builds expected to be stable for general use.
+- Nightly builds which are experimental builds that may contain untested changes and issues. *They are marked as pre-releases on GitHub.*
+
+Each published build contains the mod and the modpack, as specified above.
+
+> Go with the **stable build** if you're unsure.
+
+> [!NOTE]
 > Further on, this page will cover only the modpack, since it's the intended option.
 
 ## Putting it all together
