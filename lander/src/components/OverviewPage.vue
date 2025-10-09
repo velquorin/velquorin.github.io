@@ -260,6 +260,7 @@ function afterLeave(element) {
 }
 
 .faq-question {
+  font-family: 'Inter', sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-between;

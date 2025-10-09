@@ -123,10 +123,11 @@ export default {
 }
 
 .license-toggle {
+  font-family: 'Inter', sans-serif;
   background: transparent;
   padding: 0.35rem 0.6rem;
   border: none;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   color: var(--foreground-accent);
 }
