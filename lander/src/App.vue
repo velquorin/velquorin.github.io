@@ -473,8 +473,8 @@ footer {
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--foreground-primary);
-  animation: fadeIn 0.6s ease-out;
-  animation-delay: 0.6s;
+  animation: fadeIn 0.5s ease-out;
+  animation-delay: 0.425s;
   animation-fill-mode: both;
 }
 
