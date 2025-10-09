@@ -46,14 +46,14 @@ This is an open-source Minecraft utility mod and a modpack (commonly called a "c
   - All of the above having copy, paste, share and other context actions available via shortcuts and context menu.
 
 ## Why this and not *x*?
-This project isn't meant to replace every single PvP client. modpack, or utility mod. And it's very likely not going to, at least for most people.
-Large projects like Lunar or Badlion have long community backing, big developer teams and cosmetic campaigns - Velquorin doesn't offer most of this.
-Some features, however, like cosmetics or legacy version (limited to 1.8.9 and possibly 1.12.2) may be added in the future.
+Generally? Freedom, launcher agnosticism and flexibility. However, everyone is different, so for example traits that put Velquorin in favor in one person may push away others (design language, for example). The choice is yours, you can always try it out to see if you like it!
 
-What Velquorin does provide is openness, launcher agnosticism, compatibility, flexibility and ease of use.
+tl;dr you might like it, give it a try.
 
-If you're curious, the best way to find out is to try.
+
 
 ## License
 Client is licensed under [GPL 3.0](http://choosealicense.com/licenses/gpl-3.0/). The handbook and examples are in public domain.
-See [this](https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions) for credits and attributions.
+
+## [Credits & attributions](https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions)
+*See [README](https://github.com/velquorin/client?tab=readme-ov-file#credits--attributions) in the main repository.*
