@@ -48,7 +48,8 @@ export default defineConfig({
           { text: 'Glossary', link: '/reference/glossary' },
           { text: 'Supported integrations', link: '/reference/integrations' },
           { text: 'Compatibility with other mods', link: '/reference/compatibility' },
-          { text: 'Troubleshooting & frequently asked questions', link: '/reference/faq-and-troubleshooting' }
+          { text: 'Troubleshooting & frequently asked questions', link: '/reference/faq-and-troubleshooting' },
+          { text: 'Internals', link: '/reference/development' }
         ]
       },
       {
