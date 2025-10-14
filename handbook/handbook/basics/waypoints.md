@@ -1,4 +1,4 @@
-# Waypoints 
+# Waypoints
 Velquorin, alongside all other features, adds waypoints into the game.
 
 Waypoints are named points in the game world. They're saved on per-world (or per-server) basis.
@@ -15,3 +15,8 @@ Alongside that, you can configure whether to hide waypoints that are far away fr
 and whether to scale waypoints based on distance (by default, waypoints scale down as they get farther away).
 
 Both of the settings described above are on by default.
+
+Alongside that, you can manage waypoins through the waypoints list that you can open in pause menu and the title screen. 
+It's identified via a **pin** icon, and is located alongside other client buttons. In it, you can add new waypoints, and edit / remove existing ones. 
+
+Beware, that if you're not in a world, and you're trying to manually create a waypoint, you'll need to specify which world it belongs to.

@@ -3,7 +3,7 @@
 </p>
 
 ### Welcome to Velquorin (**pronounced /ˈvɛl.kwɔː.rɪn/**)!
-This is an open-source Minecraft utility mod and a modpack (commonly called a "client"), similar to Lunar or Badlion feature-wise, but more transparent and aimed at the latest version, rather than compatibility with legacy versions.
+This is an open-source Minecraft utility mod and a modpack (commonly called a "client"), similar to Lunar or Badlion feature-wise, but more transparent and aimed at the latest version using the Fabric mod loader, rather than compatibility with legacy versions.
 
 > [!NOTE]
 > This project is still in heavy development, and thus the handbook might lag behind the latest changes.
@@ -49,8 +49,6 @@ This is an open-source Minecraft utility mod and a modpack (commonly called a "c
 Generally? Freedom, launcher agnosticism and flexibility. However, everyone is different, so for example traits that put Velquorin in favor in one person may push away others (design language, for example). The choice is yours, you can always try it out to see if you like it!
 
 tl;dr you might like it, give it a try.
-
-
 
 ## License
 Client is licensed under [GPL 3.0](http://choosealicense.com/licenses/gpl-3.0/). The handbook and examples are in public domain.
