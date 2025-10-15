@@ -49,6 +49,7 @@ export default defineConfig({
           { text: 'Supported integrations', link: '/reference/integrations' },
           { text: 'Compatibility with other mods', link: '/reference/compatibility' },
           { text: 'Troubleshooting & frequently asked questions', link: '/reference/faq-and-troubleshooting' },
+          { text: 'Performance & hardware requirements', link: '/reference/performance-hardware-requirements' },
           { text: 'Internals', link: '/reference/development' }
         ]
       },
