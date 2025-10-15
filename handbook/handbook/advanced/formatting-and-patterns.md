@@ -47,9 +47,9 @@ References to the environments of modules using the templating system.
 | `pitch` | The pitch angle  | Floating number |
 
 #### Functions
-| Name | Arguments                                                                                                      | Description                                       | Returns                                                                        |
-|------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------|
-| `r`  | `Value` (Floating number): The value to round<br/>`Decimal places` (Number): Amount of decimal places to leave | Rounds the number to the amount of decimal places | Rounded number. Might be non-floating if the `Decimal places` argument is `0`. |
+| Name    | Arguments                                                                                                      | Description                                       | Returns                                                                        |
+|---------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------|
+| `round` | `Value` (Floating number): The value to round<br/>`Decimal places` (Number): Amount of decimal places to leave | Rounds the number to the amount of decimal places | Rounded number. Might be non-floating if the `Decimal places` argument is `0`. |
 
 
 ### CPU
