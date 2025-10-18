@@ -1,7 +1,7 @@
 <img alt="banner" src="./.github/banner.png">
 
-i mean it works. . .
+Lander website & handbook for [🦋 Velquorin](https://github.com/velquorin/client).
 
 ---
 
-[This repository is released to the public domain.](LICENSE)
+[This repository is released into the public domain.](LICENSE)
