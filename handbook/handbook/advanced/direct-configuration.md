@@ -1,6 +1,6 @@
 # Directly configuring the client by editing the configuration file
-You can directly configure Velquorin by editing the configuration `velquorin.config.json` file. 
-It is located in the root folder of your instance (often `.minecraft`).
+You can directly configure Velquorin by editing the configuration `config.json` file. 
+It is located in the `velquorin` folder, which is located in the root folder of your instance (often `.minecraft`).
 
 ## Base structure
 Generally, the config file follows this structure:
