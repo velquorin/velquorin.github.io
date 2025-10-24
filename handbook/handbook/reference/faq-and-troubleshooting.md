@@ -37,7 +37,6 @@ Because of that, most Iris shaders would override some of the ambiance module tw
 > So you get the full experience, while getting this warning.
 
 This warning means that the client could not load methods for some context actions (for example, copying a file, opening a folder in file explorer).
-This **can** *theoretically* be fixed via putting `-Djava.awt.headless=false` in your run parameters, however this does not work most of the time.
 
 ## "Some shortcuts are reserved by macOS. Change if needed in system settings."
 You're working on macOS, and the OS can reserve some shortcuts as system operations (for example Control+Space, Control+Escape and others).
