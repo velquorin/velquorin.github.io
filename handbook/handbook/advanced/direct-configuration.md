@@ -5,9 +5,6 @@ It is located in the `velquorin` folder, which is located in the root folder of 
 ## Base structure
 Generally, the config file follows this structure:
 
-## Structure
-At the top level, the file has two main sections:
-
 ```json
 {
   "options": "...", // Standalone options
@@ -27,7 +24,7 @@ Each module entry looks like this:
 
 The `custom` section is used by [widgets](/basics/widgets), for example, for storing their position data.
 
-### Settings
+#### Settings
 A setting is stored as a simple key/value pair.
 Values can be booleans, numbers, strings, enums, or colors.
 
