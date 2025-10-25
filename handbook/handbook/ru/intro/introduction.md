@@ -5,9 +5,6 @@
 ### Добро пожаловать в Velquorin (**произносится /ˈvɛl.kwɔː.rɪn/**)!
 Velquorin является открытым Minecraft модпаком и модом-утилитой (часто называемый "клиентом"), схожей по функционалу с Lunar или Badlion клиентами, но более прозрачная и ориентированная на последние версии игры, а не совместимость со старыми.
 
-> [!NOTE]
-> This project is still in heavy development, and thus the handbook might lag behind the latest changes.
-
 ## Features overview
 - [Discord Rich Presence](/ru/reference/glossary#discord-rich-presence)
 - Метки
