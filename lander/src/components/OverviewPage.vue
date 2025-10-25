@@ -2,34 +2,34 @@
   <main class="overview-root">
     <article class="overview-content" aria-live="polite">
       <header class="overview-header">
-        <h1>Brief introduction</h1>
+        <h1>{{ $t('overview.title') }}</h1>
         <p class="lead">
-          Velquorin (pronounced /ˈvɛl.kwɔː.rɪn/) is an open-source Minecraft utility mod and modpack, containing lots of utility features, tweaks and other sorts of enhancements.
+          {{ $t('overview.lead') }}
         </p>
       </header>
 
       <section class="section" id="features">
-        <h2>Feature overview</h2>
-        <p>Generally most of the stuff you'd expect from a utility mod (lots of info widgets including FPS, CPS, both in-game and IRL clock, resource load and more; waypoints; gamma; Discord RPC) is present in this project.</p>
-        <p>However, there are some unique (to Minecraft mods) features that I can highlight.</p>
+        <h2>{{ $t('overview.features.title') }}</h2>
+        <p>{{ $t('overview.features.intro') }}</p>
+        <p>{{ $t('overview.features.unique') }}</p>
         <ul class="feature-list">
           <li>
-            <strong>Ambiance</strong>
+            <strong>{{ $t('overview.features.ambiance') }}</strong>
             <ul>
-              <li>Visual customization (up to a full override) of the world colors and effects.</li>
+              <li>{{ $t('overview.features.ambianceDescription') }}</li>
             </ul>
           </li>
           <li>
-            <strong>View Model</strong>
+            <strong>{{ $t('overview.features.viewModel') }}</strong>
             <ul>
-              <li>Visual customization of the hand model (scale and position/offset in particular).</li>
+              <li>{{ $t('overview.features.viewModelDescription') }}</li>
             </ul>
           </li>
         </ul>
       </section>
 
       <section class="section" id="faq">
-        <h2>Common questions</h2>
+        <h2>{{ $t('overview.faq.title') }}</h2>
         <div class="faq-list">
           <div
               v-for="(item, index) in faqItems"
@@ -72,43 +72,62 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const faqItems = ref([
+const { t } = useI18n();
+
+const openStates = ref([false, false, false, false, false, false]);
+
+const { locale } = useI18n();
+
+const compatibilityUrl = computed(() => {
+  return locale.value === 'ru'
+    ? '/handbook/ru/reference/compatibility.html'
+    : '/handbook/reference/compatibility.html';
+});
+
+const handbookInstallationUrl = computed(() => {
+  return locale.value === 'ru'
+    ? '/handbook/ru/intro/installation.html'
+    : '/handbook/intro/installation.html';
+});
+
+const faqItems = computed(() => [
   {
-    question: "Which Minecraft versions are supported?",
-    answer: "Velquorin focuses on the latest versions of Minecraft. Legacy support (1.8.9, 1.12.2) may be added later.",
-    isOpen: false
+    question: t('overview.faq.q1'),
+    answer: t('overview.faq.a1'),
+    isOpen: openStates.value[0]
   },
   {
-    question: "Can I use my existing mods with Velquorin?",
-    answer: "Yes, Velquorin works as a modpack, so you can usually add your own mods. Just note that <a href=\"/handbook/reference/compatibility.html\" target=\"_blank\" rel=\"noopener noreferrer\">some mods may be incompatible <i class=\"fas fa-external-link-alt\"></i></a> with Velquorin.",
-    isOpen: false
+    question: t('overview.faq.q2'),
+    answer: t('overview.faq.a2').replace('{compatibilityUrl}', compatibilityUrl.value),
+    isOpen: openStates.value[1]
   },
   {
-    question: "Why would I use this over Lunar or Badlion?",
-    answer: "Generally? Freedom, launcher agnosticism and flexibility. However, everyone is different, so for example traits that put Velquorin in favor in one person may push away others (design language, for example). The choice is yours, you can always try it out to see if you like it!<br><br>tl;dr you might like it, give it a try.",
-    isOpen: false
+    question: t('overview.faq.q3'),
+    answer: t('overview.faq.a3'),
+    isOpen: openStates.value[2]
   },
   {
-    question: "Can I get banned for using Velquorin?",
-    answer: "No, probably not. Velquorin is not designed to give you any sort of unfair advantage. That said, there were instances of servers banning certain mods (for example, Hypixel banning Freelook), so you have account for that as well.",
-    isOpen: false
+    question: t('overview.faq.q4'),
+    answer: t('overview.faq.a4'),
+    isOpen: openStates.value[3]
   },
   {
-    question: "Why is there a separate handbook?",
-    answer: "The handbook goes into detail about setup, features, troubleshooting and more. To keep this overview clean, it lives separately from it.",
-    isOpen: false
+    question: t('overview.faq.q5'),
+    answer: t('overview.faq.a5'),
+    isOpen: openStates.value[4]
   },
   {
-    question: "I'm having a problem with Velquorin! It's crashing / not doing what I expect it to!",
-    answer: "Firstly, please consult with the <a href=\"/handbook/intro/installation.html\" target=\"_blank\" rel=\"noopener noreferrer\">handbook <i class=\"fas fa-external-link-alt\"></i></a>, it might contain the fix for your problem. However, if you can't find one, you <a href=\"https://github.com/velquorin/client/issues/new/choose\" target=\"_blank\" rel=\"noopener noreferrer\">can open an issue in our repository <i class=\"fas fa-external-link-alt\"></i></a>.",
-    isOpen: false
+    question: t('overview.faq.q6'),
+    answer: t('overview.faq.a6').replace('{handbookUrl}', handbookInstallationUrl.value),
+    isOpen: openStates.value[5]
   }
 ]);
 
 const toggleFaq = (index) => {
-  faqItems.value[index].isOpen = !faqItems.value[index].isOpen;
+  openStates.value[index] = !openStates.value[index];
 };
 
 function beforeEnter(element) {

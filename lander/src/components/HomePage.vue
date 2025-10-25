@@ -1,13 +1,13 @@
 <template>
   <main>
     <div class="home-content" aria-live="polite">
-      <h1>Welcome to Velquorin</h1>
-      <p>A modern, transparent Minecraft utility mod and modpack, and an alternative to closed clients.</p>
+      <h1>{{ $t('home.title') }}</h1>
+      <p>{{ $t('home.description') }}</p>
 
       <div class="home-call-to-action">
-        <router-link class="primary-button" to="/installation">Installation</router-link>
+        <router-link class="primary-button" to="/installation">{{ $t('home.installationButton') }}</router-link>
         <!--suppress HtmlUnknownTarget -->
-        <router-link class="secondary-button" to="/overview">Overview</router-link>
+        <router-link class="secondary-button" to="/overview">{{ $t('home.overviewButton') }}</router-link>
       </div>
     </div>
   </main>

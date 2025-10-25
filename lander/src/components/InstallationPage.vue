@@ -2,65 +2,65 @@
   <main class="installation-root">
     <article class="installation-content" aria-live="polite">
       <header class="installation-header">
-        <h1>Installation</h1>
+        <h1>{{ $t('installation.title') }}</h1>
         <p class="lead">
-          A quick installation guide. For a friendlier, in-depth one see
-          <a href="/handbook/intro/installation.html" target="_blank" rel="noopener noreferrer">handbook <i class="fas fa-external-link-alt"></i></a>.
+          {{ $t('installation.lead') }}
+          <a :href="handbookInstallUrl" target="_blank" rel="noopener noreferrer">{{ $t('installation.handbook') }} <i class="fas fa-external-link-alt"></i></a>.
         </p>
       </header>
 
       <section class="section" id="prerequisites">
-        <h2>Prerequisites</h2>
+        <h2>{{ $t('installation.prerequisites.title') }}</h2>
 
         <div class="callout tip" role="note" aria-label="Tip">
-          <strong>Tip!</strong> If you're already somewhat experienced with Minecraft modding, you can skip right to Downloads.
+          <strong>{{ $t('installation.prerequisites.tip') }}</strong> {{ $t('installation.prerequisites.tipContent') }}
         </div>
 
         <ul class="prerequisites-list">
           <li>
-            <strong>Launcher</strong> Most will work, but one suited for modding (for example, Modrinth or Prism) would give you the best experience, while some basic ones (official Minecraft Launcher) will be a pain in the ass to use.
+            <strong>{{ $t('installation.prerequisites.launcher') }}</strong> {{ $t('installation.prerequisites.launcherDescription') }}
           </li>
           <li>
-            <strong>Java 21 (or above)</strong>
-            I personally recommend Azul, but most OpenJDK distributions will work.
-            <a href="https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu" target="_blank" rel="noopener noreferrer">Azul Zulu downloads <i class="fas fa-external-link-alt"></i></a>
+            <strong>{{ $t('installation.prerequisites.java') }}</strong>
+            {{ $t('installation.prerequisites.javaDescription') }}
+            <a href="https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu" target="_blank" rel="noopener noreferrer">{{ $t('installation.prerequisites.azulDownloads') }} <i class="fas fa-external-link-alt"></i></a>
           </li>
           <li>
-            <strong>Fabric Loader</strong> Required to run the mod/pack. Install via your launcher.
+            <strong>{{ $t('installation.prerequisites.fabricLoader') }}</strong> {{ $t('installation.prerequisites.fabricLoaderDescription') }}
           </li>
           <li>
-            <strong>Fabric API</strong> If you install the standalone mod (not the modpack), make sure to install the <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API <i class="fas fa-external-link-alt"></i></a>. Modpack already inculdes it.
+            <strong>{{ $t('installation.prerequisites.fabricApi') }}</strong> {{ $t('installation.prerequisites.fabricApiDescription') }} <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">{{ $t('installation.prerequisites.fabricApiLink') }} <i class="fas fa-external-link-alt"></i></a>. {{ $t('installation.prerequisites.fabricApiNote') }}
           </li>
         </ul>
       </section>
 
       <section class="section" id="downloads">
-        <h2>Downloads</h2>
+        <h2>{{ $t('installation.downloads.title') }}</h2>
 
         <p>
-          Find the list of releases on the GitHub releases page:
-          <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">GitHub releases <i class="fas fa-external-link-alt"></i></a>
+          {{ $t('installation.downloads.githubReleases') }}
+          <a href="https://github.com/velquorin/client/releases" target="_blank" rel="noopener noreferrer">{{ $t('installation.downloads.githubReleasesLink') }} <i class="fas fa-external-link-alt"></i></a>
         </p>
 
         <br>
 
         <div class="download-explanation">
           <p>
-            Releases are split into two channels:
+            {{ $t('installation.downloads.channelsIntro') }}
           </p>
           <ul>
-            <li><strong>Stable</strong> are tested builds expected to be stable for general use.</li>
-            <li><strong>Nightly</strong> are experimental builds that may contain untested changes and issues. <strong>They are marked as pre-releases on GitHub.</strong></li>
+            <li><strong>{{ $t('installation.downloads.stableChannel') }}</strong> {{ $t('installation.downloads.stableDescription') }}</li>
+            <li><strong>{{ $t('installation.downloads.nightlyChannel') }}</strong> {{ $t('installation.downloads.nightlyDescription') }} <strong>{{ $t('installation.downloads.nightlyNote') }}</strong></li>
           </ul>
 
           <br>
 
           <p>
-            Each release contains:
+            {{ $t('installation.downloads.contentIntro') }}
           </p>
           <ul>
-            <li><strong>Mod</strong> is the core Velquorin mod containing widgets, game tweaks, enhancements and more.</li>
-            <li><strong>Modpack</strong> is the core mod combined with a curated list of quality-of-life mods and tweaks.</li>
+            <li><strong>{{ $t('installation.downloads.mod') }}</strong> {{ $t('installation.downloads.modDescription') }}</li>
+            <li><strong>{{ $t('installation.downloads.modpack') }}</strong> {{ $t('installation.downloads.modpackDescription') }}</li>
           </ul>
         </div>
       </section>
@@ -194,4 +194,14 @@
 }
 </style>
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+
+const handbookInstallUrl = computed(() => {
+  return locale.value === 'ru'
+    ? '/handbook/ru/intro/installation.html'
+    : '/handbook/intro/installation.html';
+});
 </script>

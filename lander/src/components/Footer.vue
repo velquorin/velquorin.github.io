@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer" role="contentinfo">
     <div class="footer-compact">
-      <span class="copyright">© Clemenside, 2025.</span>
+      <span class="copyright">{{ $t('footer.copyright') }}</span>
       <button
           class="license-toggle"
           @click="toggleExpanded"
@@ -9,7 +9,7 @@
           aria-controls="footer-details"
           type="button"
       >
-        Licensing and credits (click to reveal)
+        {{ $t('footer.licenseToggle') }}
       </button>
     </div>
 
@@ -29,15 +29,15 @@
           :aria-hidden="(!isExpanded).toString()"
       >
         <p>
-          Logo is a derivative of the
+          {{ $t('footer.logoDerivative') }}
           <a target="_blank" rel="noopener noreferrer" href="https://www.onlinewebfonts.com/icon/34775">
-            "Butterfly Wings couple"
+            "{{ $t('footer.logoSource') }}"
           </a>
-          work from OnlineWebFonts.com, licensed under
-          <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a> <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">(notice file)</a>
+          {{ $t('footer.logoLicense') }}
+          <a target="_blank" rel="noopener noreferrer" href="LICENSE-OnlineWebFonts">CC-BY-4.0</a> <a target="_blank" rel="noopener noreferrer" href="NOTICE-OnlineWebFonts">{{ $t('footer.noticeFile') }}</a>
         </p>
         <p>
-          Client licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.
+          {{ $t('footer.licenseText') }}
         </p>
       </div>
     </transition>

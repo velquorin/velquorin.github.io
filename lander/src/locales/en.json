@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "installation": "Installation",
+    "overview": "Overview",
+    "downloads": "Downloads",
+    "sourceCode": "Source code",
+    "handbook": "Handbook"
+  },
+  "home": {
+    "title": "Welcome to Velquorin",
+    "description": "A modern, transparent Minecraft utility mod and modpack, and an alternative to closed clients.",
+    "installationButton": "Installation",
+    "overviewButton": "Overview"
+  },
+  "installation": {
+    "title": "Installation",
+    "lead": "A quick installation guide. For a friendlier, in-depth one see",
+    "handbook": "handbook",
+    "prerequisites": {
+      "title": "Prerequisites",
+      "tip": "Tip!",
+      "tipContent": "If you're already somewhat experienced with Minecraft modding, you can skip right to Downloads.",
+      "launcher": "Launcher",
+      "launcherDescription": "Most will work, but one suited for modding (for example, Modrinth or Prism) would give you the best experience, while some basic ones (official Minecraft Launcher) will be a pain in the ass to use.",
+      "java": "Java 21 (or above)",
+      "javaDescription": "I personally recommend Azul, but most OpenJDK distributions will work.",
+      "azulDownloads": "Azul Zulu downloads",
+      "fabricLoader": "Fabric Loader",
+      "fabricLoaderDescription": "Required to run the mod/pack. Install via your launcher.",
+      "fabricApi": "Fabric API",
+      "fabricApiDescription": "If you install the standalone mod (not the modpack), make sure to install the",
+      "fabricApiLink": "Fabric API",
+      "fabricApiNote": "Modpack already inculdes it."
+    },
+    "downloads": {
+      "title": "Downloads",
+      "githubReleases": "Find the list of releases on the GitHub releases page:",
+      "githubReleasesLink": "GitHub releases",
+      "channelsIntro": "Releases are split into two channels:",
+      "stableChannel": "Stable",
+      "stableDescription": "are tested builds expected to be stable for general use.",
+      "nightlyChannel": "Nightly",
+      "nightlyDescription": "are experimental builds that may contain untested changes and issues.",
+      "nightlyNote": "They are marked as pre-releases on GitHub.",
+      "contentIntro": "Each release contains:",
+      "mod": "Mod",
+      "modDescription": "is the core Velquorin mod containing widgets, game tweaks, enhancements and more.",
+      "modpack": "Modpack",
+      "modpackDescription": "is the core mod combined with a curated list of quality-of-life mods and tweaks."
+    }
+  },
+  "overview": {
+    "title": "Brief introduction",
+    "lead": "Velquorin (pronounced /ˈvɛl.kwɔː.rɪn/) is an open-source Minecraft utility mod and modpack, containing lots of utility features, tweaks and other sorts of enhancements.",
+    "features": {
+      "title": "Feature overview",
+      "intro": "Generally most of the stuff you'd expect from a utility mod (lots of info widgets including FPS, CPS, both in-game and IRL clock, resource load and more; waypoints; gamma; Discord RPC) is present in this project.",
+      "unique": "However, there are some unique (to Minecraft mods) features that I can highlight.",
+      "ambiance": "Ambiance",
+      "ambianceDescription": "Visual customization (up to a full override) of the world colors and effects.",
+      "viewModel": "View Model",
+      "viewModelDescription": "Visual customization of the hand model (scale and position/offset in particular)."
+    },
+    "faq": {
+      "title": "Common questions",
+      "q1": "Which Minecraft versions are supported?",
+      "a1": "Velquorin focuses on the latest versions of Minecraft.",
+      "q2": "Can I use my existing mods with Velquorin?",
+      "a2": "Yes, Velquorin works as a modpack, so you can usually add your own mods. Just note that <a href=\"{compatibilityUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">some mods may be incompatible <i class=\"fas fa-external-link-alt\"></i></a> with Velquorin.",
+      "q3": "Why would I use this over Lunar or Badlion?",
+      "a3": "Generally? Freedom, launcher agnosticism and flexibility. However, everyone is different, so for example traits that put Velquorin in favor in one person may push away others (design language, for example). The choice is yours, you can always try it out to see if you like it!<br><br>tl;dr you might like it, give it a try.",
+      "q4": "Can I get banned for using Velquorin?",
+      "a4": "No, probably not. Velquorin is not designed to give you any sort of unfair advantage. That said, there were instances of servers banning certain mods (for example, Hypixel banning Freelook), so you have account for that as well.",
+      "q5": "Why is there a separate handbook?",
+      "a5": "The handbook goes into detail about setup, features, troubleshooting and more. To keep this overview clean, it lives separately from it.",
+      "q6": "I'm having a problem with Velquorin! It's crashing / not doing what I expect it to!",
+      "a6": "Firstly, please consult with the <a href=\"{handbookUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">handbook <i class=\"fas fa-external-link-alt\"></i></a>, it might contain the fix for your problem. However, if you can't find one, you <a href=\"https://github.com/velquorin/client/issues/new/choose\" target=\"_blank\" rel=\"noopener noreferrer\">can open an issue in our repository <i class=\"fas fa-external-link-alt\"></i></a>."
+    }
+  },
+  "footer": {
+    "copyright": "© Clemenside, 2025.",
+    "licenseToggle": "Licensing and credits (click to reveal)",
+    "logoDerivative": "Logo is a derivative of the",
+    "logoSource": "Butterfly Wings couple",
+    "logoLicense": "work from OnlineWebFonts.com, licensed under",
+    "licenseText": "Client licensed under GPL 3.0. Website, handbook and examples are in public domain. Not affiliated with Mojang or Microsoft.",
+    "noticeFile": "(NOTICE)"
+  }
+}
