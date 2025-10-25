@@ -46,7 +46,7 @@
 ```
 
 ### Enum
-> [!NOTE]
+> [!NOTE] Примечание
 > Velquorin сначала попробует десериализовать константу через название, далее при провале через [ординал](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html).
 
 ```json
